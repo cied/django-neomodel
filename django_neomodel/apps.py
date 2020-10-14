@@ -15,6 +15,7 @@ class NeomodelConfig(AppConfig):
         config.FORCE_TIMEZONE = getattr(settings, 'NEOMODEL_FORCE_TIMEZONE', False)
         config.ENCRYPTED_CONNECTION = getattr(settings, 'NEOMODEL_ENCRYPTED_CONNECTION', True)
         config.MAX_CONNECTION_POOL_SIZE = getattr(settings, 'NEOMODEL_MAX_CONNECTION_POOL_SIZE', config.MAX_CONNECTION_POOL_SIZE)
+        config.AUTO_INSTALL_LABELS = getattr(settings, 'NEOMODEL_AUTO_INSTALL_LABELS', config.AUTO_INSTALL_LABELS)
 
     def ready(self):
         self.read_settings()
